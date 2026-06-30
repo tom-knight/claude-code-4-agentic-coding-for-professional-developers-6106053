@@ -25,3 +25,50 @@ b {
   font-family: "Hubot Sans", sans-serif;
   color: var(--pico-color-violet-500);
 }
+
+nav details.dropdown summary:not([role]),
+nav details.dropdown ul li a {
+  font-size: 0.9rem;
+}
+
+nav details.dropdown summary:not([role]),
+nav details.dropdown summary:not([role]):focus,
+nav details[open].dropdown summary:not([role]) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--pico-color-violet-500);
+  color: white;
+  font-weight: bold;
+}
+
+.modal-body {
+  display: flex;
+  gap: 1rem;
+}
+
+.modal-image {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .modal-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-image {
+    width: 100px;
+  }
+
+  dialog h1 {
+    --pico-font-size: 1.6rem;
+  }
+}
+
+[data-theme="light"] nav details.dropdown summary:not([role]),
+[data-theme="light"] nav details.dropdown summary:not([role]):focus,
+[data-theme="light"] nav details[open].dropdown summary:not([role]) {
+  color: black;
+}
